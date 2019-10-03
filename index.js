@@ -9,7 +9,7 @@ client.on('ready', () =>{
     console.log('This bot is online!');
     client.user.setActivity('the centre', { type: 'WATCHING'}).catch(console.error);
 
-})
+});
 
 client.on('message', message => {
     
