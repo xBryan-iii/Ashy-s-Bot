@@ -22,7 +22,6 @@ client.on('message', message => {
         break;
         case 'call-2':
             if (!message.content.startsWith(PREFIX)) return
-            if (!message.member.rol)
             if (!args[1]) return message.channel.send(`Error occured! ${message.author}, please tag exactly which therapist you want to call.`)
             message.guild.channels.find(channel => channel.id === "610947298607890455").send(`Thank you for calling, ${message.author}! Please wait for the incredible therapist to answer. Keep an eye on ${message.guild.channels.find(channel => channel.id === "610947298607890455")} for an answer. | ${args[1]}`)
         break;
