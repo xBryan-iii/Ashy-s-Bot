@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
-const token = 'NjI3NTczMDczMzA2MTg5ODQ0.XZSgpQ.auCiNFKvSbVYaRRyZ-ZCDJmof5s'
+const token = process.env.ashy1;
 
 const PREFIX = '!';
 
@@ -30,6 +30,7 @@ client.on('message', message => {
             if (!message.content.startsWith(PREFIX)) return
             if (!args[1]) return message.channel.send(`Error occured! ${message.author}, please tag exactly which person's call you want to answer (tag the person).`)
             message.guild.channels.find(channel => channel.id === "610947298607890455").send(`${args[1]}, ${message.author} will be with you in a moment.`)
+        break;
     }
 
 
