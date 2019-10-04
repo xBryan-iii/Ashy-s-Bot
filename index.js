@@ -32,7 +32,7 @@ client.on('message', message => {
         break;
         case 'test':
             if (!message.content.startsWith(PREFIX)) return
-            message.channel.send(`Thank you for calling, ${message.author}! Please wait for one of our incredible therapists to answer. Keep an eye on ${message.guild.channels.find(channel => channel.id === "610947298607890455")} for an answer. | ${message.guild.roles.find(role => role.id === "610947465570418713")}`)
+            message.guild.members.find(member => member.id === "254989511640088576").addRole("610938151351091239")
     }
 
 
