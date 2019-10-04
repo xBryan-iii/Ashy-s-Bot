@@ -30,6 +30,9 @@ client.on('message', message => {
             if (!args[1]) return message.channel.send(`Error occured! ${message.author}, please tag exactly which person's call you want to answer (tag the person).`)
             message.guild.channels.find(channel => channel.id === "610947298607890455").send(`${args[1]}, ${message.author} will be with you in a moment.`)
         break;
+        case 'test':
+            if (!message.content.startsWith(PREFIX)) return
+            message.channel.send(`Thank you for calling, ${message.author}! Please wait for one of our incredible therapists to answer. Keep an eye on ${message.guild.channels.find(channel => channel.id === "610947298607890455")} for an answer. | ${message.guild.roles.find(role => role.id === "610947465570418713")}`)
     }
 
 
