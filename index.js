@@ -29,7 +29,7 @@ client.on('message', message => {
             if (!message.content.startsWith(PREFIX)) return
             if (!message.member.roles.find(role => role.id === "610947465570418713")) return message.channel.send(`Error occured! ${message.author}, this command is only for people with the role "${client.guilds.get('610936256062291968').roles.find(role => role.id === "610947465570418713").name}".`)
             if (!args[1]) return message.channel.send(`Error occured! ${message.author}, please tag exactly which person's call you want to answer (tag the person).`)
-            if (args[1] = message.author) return message.channel.send(`Error occured! ${message.author}, you can't answer a call by you.`)
+            if (args[2] = message.author) return message.channel.send(`Error occured! ${message.author}, you can't answer a call by you.`)
             message.guild.channels.find(channel => channel.id === "610947298607890455").send(`${args[1]}, ${message.author} will be with you in a moment.`)
         break;
     }
