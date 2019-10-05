@@ -28,7 +28,7 @@ client.on('message', message => {
         case 'answer':
             if (!message.content.startsWith(PREFIX)) return
             if (!args[1]) return message.channel.send(`Error occured! ${message.author}, please tag exactly which person's call you want to answer (tag the person).`)
-            if (message.mentions.users.first = message.author) return message.channel.send(`Error occured! ${message.author}, you can't answer a call by you.`)
+            if (args[1] = message.author.tag) return message.channel.send(`Error occured! ${message.author}, you can't answer a call by you.`)
             message.guild.channels.find(channel => channel.id === "610947298607890455").send(`${args[1]}, ${message.author} will be with you in a moment.`)
         break;
     }
